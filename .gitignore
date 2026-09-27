@@ -1,0 +1,10 @@
+__pycache__
+/extracted_*
+/chroma_db
+/chroma_db_backup
+*.mrpro
+*.db
+*.bak
+archive/
+archive/*
+.venv/

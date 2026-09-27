@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "moon-reader-extract"
+version = "0.2.0"
+description = "Import, embed, and semantically search highlights and notes from Moon Reader backups"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "chromadb>=0.4.22",
+    "rich>=13.0.0",
+    "prompt_toolkit>=3.0.0",
+]
+
+[project.scripts]
+mreas = "mreas.cli.main:cli_entry_point"
+mre = "mreas.cli.main:cli_entry_point"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mreas"]
